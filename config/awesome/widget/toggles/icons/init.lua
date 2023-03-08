@@ -11,7 +11,10 @@ local icons = {
 		on = toggle_icon_dir .. "airplane-mode.svg",
 		off = toggle_icon_dir .. "airplane-mode-off.svg",
 	},
-
+	keyboard_light = {
+		on = toggle_icon_dir .. "keyboard_light.svg",
+		off = toggle_icon_dir .. "keyboard_light.svg",
+	},
 	bluetooth = {
 		on = toggle_icon_dir .. "bluetooth.svg",
 		off = toggle_icon_dir .. "bluetooth-off.svg",

@@ -49,6 +49,8 @@
 	This is a collection/stash of my linux configurations also known as dotfiles. I don't know why did I wasted my time writing these, especially my AwesomeWM setups. Or maybe it's because... I did it for me. I liked it. I was good at it. And I was really -- I was alive. ;) So no wasted time after all. You're probably here because of my awesome dotfiles. So yeah, steal what you want. Don't forget to check my <a href='https://github.com/manilarome/'>other projects!</a>
 </p>
 
+## Cybensis' Edits
+This fork is my modified version of the dotfiles made to work with my Zenbook 14 by adding keyboard backlight toggles and a few other things here and there. I've also only modified the Linear theme, although the others should still work from my fixes they won't contain my configurations.
 
 ## [Wiki here](https://github.com/frostedpenguin/the-glorious-dotfiles/wiki)
 
@@ -98,6 +100,7 @@ through the themes so no worry for copying the wrong folder 😉.
 
 These are the features included in my AwesomeWM setups!
 
++ Keyboard brightness toggle
 + Notification Center
 + Dynamic Wallpaper
 + File/Web Searching like macOS' Spotlight

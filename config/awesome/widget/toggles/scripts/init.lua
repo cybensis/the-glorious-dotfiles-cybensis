@@ -15,6 +15,11 @@ local scripts = {
 		toggle_off_script = "rfkill block bluetooth",
 		toggle_on_script = "rfkill unblock bluetooth",
 	},
+	keyboard_light = {
+		watch_script = _,
+		toggle_off_script = "echo 0 > /sys/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight/brightness",
+		toggle_on_script = "echo 2 > /sys/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight/brightness",
+	},
 	airplane_mode = {
 		watch_script = {
 			"bash",

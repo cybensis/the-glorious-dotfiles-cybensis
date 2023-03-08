@@ -98,7 +98,7 @@ local main_control_row_two = wibox.widget({
 		layout = wibox.layout.fixed.vertical,
 		spacing = dpi(5),
 		toggle_widgets.airplane_mode.circular,
-		toggle_widgets.bluetooth.circular,
+		toggle_widgets.keyboard_light.circular,
 		toggle_widgets.blue_light.circular,
 	}),
 	{

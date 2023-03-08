@@ -9,20 +9,20 @@ return {
     terminal = "kitty",
     -- Default web browser
     web_browser = "firefox",
-    -- Default text editor
-    text_editor = "subl3",
+    -- Default IDE
+    development = "codium",
     -- Default file manager
-    file_manager = "dolphin",
+    file_manager = "thunar",
     -- Default media player
-    multimedia = "vlc",
+    music = "spotify",
+    -- Default text editor
+    text_editor = "gedit",
     -- Default game, can be a launcher like steam
     game = "supertuxkart",
     -- Default graphics editor
     graphics = "gimp-2.10",
     -- Default sandbox
     sandbox = "virtualbox",
-    -- Default IDE
-    development = "",
     -- Default network manager
     network_manager = "kitty iwctl",
     -- Default bluetooth manager
@@ -57,7 +57,7 @@ return {
   -- List of apps to start once on start-up
   run_on_start_up = {
     -- Compositor
-    "picom -b --experimental-backends --dbus --config "
+    "picom -b --dbus --config "
         .. config_dir
         .. "/configuration/picom.conf",
     -- Blueman applet

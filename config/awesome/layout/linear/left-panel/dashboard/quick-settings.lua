@@ -46,7 +46,7 @@ return wibox.widget({
 					brightness_slider,
 					volume_slider,
 					toggle_widgets.airplane_mode.circular,
-					toggle_widgets.bluetooth.circular,
+					toggle_widgets.keyboard_light.circular,
 					toggle_widgets.blue_light.circular,
 				},
 				bg = beautiful.groups_bg,

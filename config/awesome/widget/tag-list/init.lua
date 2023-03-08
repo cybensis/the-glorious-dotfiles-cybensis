@@ -6,7 +6,7 @@ local icons = require("theme.icons")
 local path_to_file = ...
 local settings = require(path_to_file .. ".settings")
 local image_margins = {
-  linear = dpi(6),
+  linear = dpi(4),
   default = dpi(10)
 }
 local mt = {

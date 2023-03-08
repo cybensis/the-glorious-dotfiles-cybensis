@@ -72,6 +72,36 @@ local bluetooth = {
 	watch_script = scripts.bluetooth.watch_script,
 }
 
+
+---@type toggle_widget_args
+local keyboard_light = {
+	name = "Keyboard Light",
+	toggle_off_callback = function()
+		awful.spawn.easy_async_with_shell(scripts.keyboard_light.toggle_off_script, function()
+			naughty.notification({
+				app_name = "Keyboard light Manager",
+				title = "<b> System Notification</b>",
+				message = "The keyboard light has been disabled!",
+				icon = icons.keyboard_light.off,
+			})
+		end)
+	end,
+	toggle_on_callback = function()
+		awful.spawn.easy_async_with_shell(scripts.keyboard_light.toggle_on_script, function()
+			naughty.notification({
+				app_name = "Keyboard light Manager",
+				title = "<b> System Notification</b>",
+				message = "The keyboard light has been enabled!",
+				icon = icons.keyboard_light.on,
+			})
+		end)
+	end,
+	toggle_on_icon = icons.keyboard_light.on,
+	toggle_off_icon = icons.keyboard_light.off,
+	watch_script = scripts.keyboard_light.watch_script,
+}
+
+
 ---@type toggle_widget_args
 local blue_light = {
 	name = "Blue Light",
@@ -113,8 +143,7 @@ local blur_effects = {
 		end)
 	end,
 	toggle_on_callback = function()
-		awful.spawn.easy_async_with_shell(scripts.blur_effects.toggle_on_script, function(_, stdout, stderr)
-			print(stderr)
+		awful.spawn.easy_async_with_shell(scripts.blur_effects.toggle_on_script, function()
 			naughty.notification({
 				app_name = "Blur Effect Manager",
 				title = "<b> System Notification</b>",
@@ -127,12 +156,13 @@ local blur_effects = {
 	toggle_off_icon = icons.blur_effects.off,
 	watch_script = scripts.blur_effects.watch_script,
 }
-
----@alias toggle_widgets "airplane_mode" | "blue_light" |"bluetooth" | "blur_effects"
+---@alias toggle_widgets "airplane_mode" | "blue_light" |"bluetooth" | "blur_effects" | "keyboard_light"
+-- -@alias toggle_widgets "airplane_mode" | "blue_light" | "blur_effects"
 ---@type table<toggle_widgets, any>
 local toggle_widgets = {
 	airplane_mode = airplane_mode,
 	bluetooth = bluetooth,
+	keyboard_light = keyboard_light,
 	blue_light = blue_light,
 	blur_effects = blur_effects,
 }
